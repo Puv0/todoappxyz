@@ -1,0 +1,21 @@
+<form [formGroup]="addTaskForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Title</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input" formControlName="title">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Description</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input"formControlName="description">
+    </div>
+    <div class="select">
+        <select name="category" id="category" formControlName="category"> 
+            <option *ngFor="let category of categories" [ngValue]="category">
+                {{category.name}}    
+            </option>
+
+        </select>
+    </div>
+  
+    <button class="submit-btn" type="submit">Add Task</button>
+
+</form>
