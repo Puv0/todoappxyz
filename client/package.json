@@ -5,9 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:win": "(if exist ..\\server\\front rmdir ..\\server\front /s /q) && ng build --prod && move dist/client ..\\server\front",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "this": "(if exist ..\\server\\front rmdir ..\\server\front /s /q) && ng build --prod && move dist/client ..\\server\front"
   },
   "private": true,
   "dependencies": {

@@ -18,6 +18,9 @@ import { join } from 'path';
   MongooseModule.forRoot(secret.mongoUrl),
   LoginModule,
   SignUpModule,
+  ServeStaticModule.forRoot({
+    rootPath: join(__dirname, '..', 'front'),
+  }),
   ],
   controllers: [AppController],
   providers: [AppService],
